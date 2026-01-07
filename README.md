@@ -1,6 +1,8 @@
 # Climate & Sustainability Intelligence System
 
 An AI-powered document intelligence platform for analyzing ESG disclosures, carbon reports, and policy documents using Retrieval-Augmented Generation (RAG).
+Architecture: React frontend → FastAPI backend → RAG pipeline (SentenceTransformers + FAISS + Hugging Face LLM) → MongoDB
+
 
 ## 🚀 Features
 
@@ -17,14 +19,14 @@ Before you begin, ensure you have the following installed:
 - **Python 3.10+** (for backend)
 - **Node.js 18+** and **npm** or **yarn** (for frontend)
 - **MongoDB** (local or cloud instance)
-- **Emergent LLM API Key** (for LLM functionality)
+- No paid API keys required (uses local open-source Hugging Face models)
 
 ## 🛠️ Setup Instructions
 
 ### 1. Clone and Navigate to Project
 
 ```bash
-cd climate-sustainability-intelligence-system-main
+cd climate-sustainability-intelligence-system
 ```
 
 ### 2. Backend Setup
@@ -61,11 +63,9 @@ Edit `.env` and set the following variables:
 ```env
 MONGO_URL=mongodb://localhost:27017
 DB_NAME=ecointel
-EMERGENT_LLM_KEY=your_emergent_llm_api_key_here
 CORS_ORIGINS=http://localhost:3000
-```
 
-**Important**: Replace `your_emergent_llm_api_key_here` with your actual Emergent Integrations API key.
+```
 
 #### Step 4: Start MongoDB
 
@@ -177,7 +177,7 @@ npm test
 ## 📁 Project Structure
 
 ```
-climate-sustainability-intelligence-system-main/
+climate-sustainability-intelligence-system
 ├── backend/
 │   ├── data/              # FAISS index and metadata
 │   ├── uploads/           # Uploaded documents
@@ -214,9 +214,10 @@ climate-sustainability-intelligence-system-main/
    - On Windows, you may need: `pip install faiss-cpu`
    - On Mac M1/M2: `pip install faiss-cpu` (CPU version recommended)
 
-4. **API Key Issues**
-   - Verify `EMERGENT_LLM_KEY` is set correctly in `.env`
-   - Check API key is valid and has sufficient credits
+4. **LLM Configuration**
+   - This project uses fully local Hugging Face models by default
+   - No external API keys are required to run the system
+
 
 ### Frontend Issues
 
@@ -297,11 +298,11 @@ climate-sustainability-intelligence-system-main/
 ### Backend (.env)
 
 | Variable | Description | Required | Default |
-|----------|-------------|----------|---------|
-| `MONGO_URL` | MongoDB connection string | Yes | - |
-| `DB_NAME` | Database name | Yes | `ecointel` |
-| `EMERGENT_LLM_KEY` | Emergent Integrations API key | Yes | - |
-| `CORS_ORIGINS` | Allowed CORS origins (comma-separated) | No | `*` |
+|--------|------------|----------|---------|
+| MONGO_URL | MongoDB connection string | Yes | - |
+| DB_NAME | Database name | Yes | ecointel |
+| CORS_ORIGINS | Allowed CORS origins | No | * |
+
 
 ### Frontend (.env)
 
