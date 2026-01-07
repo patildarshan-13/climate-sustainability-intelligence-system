@@ -1,6 +1,7 @@
 # Climate & Sustainability Intelligence System
 
 An AI-powered document intelligence platform for analyzing ESG disclosures, carbon reports, and policy documents using Retrieval-Augmented Generation (RAG).
+
 Architecture: React frontend → FastAPI backend → RAG pipeline (SentenceTransformers + FAISS + Hugging Face LLM) → MongoDB
 
 
@@ -11,6 +12,8 @@ Architecture: React frontend → FastAPI backend → RAG pipeline (SentenceTrans
 - **Vector Search**: Fast semantic search using FAISS
 - **Source References**: Every answer includes references to source document sections
 - **Modern UI**: Beautiful, responsive interface built with React and Tailwind CSS
+- **Cost-Efficient AI**: Fully local inference with open-source models (no vendor lock-in)
+
 
 ## 📋 Prerequisites
 
@@ -113,7 +116,8 @@ REACT_APP_BACKEND_URL=http://localhost:8000
 cd backend
 python server.py
 ```
-
+# Alternatively (recommended for development)
+uvicorn server:app --reload
 The backend will start on `http://localhost:8000`
 
 #### Terminal 2 - Frontend Development Server
