@@ -1,0 +1,66 @@
+================================================================================
+                    CLIMATE & SUSTAINABILITY INTELLIGENCE SYSTEM
+                              FINAL EXECUTION GUIDE
+================================================================================
+
+STEP 1: Open PowerShell and navigate to project:
+-------------------------------------------------------------------------------
+cd C:\Users\darsh\Downloads\climate-sustainability-intelligence-system-main\climate-sustainability-intelligence-system-main
+
+
+STEP 2: Start Backend Server (Open NEW PowerShell Window)
+-------------------------------------------------------------------------------
+cd backend
+python server.py
+
+Wait for: "Uvicorn running on http://0.0.0.0:8000"
+
+
+STEP 3: Start Frontend Server (Open ANOTHER NEW PowerShell Window)
+-------------------------------------------------------------------------------
+cd frontend
+npm start
+
+Wait for: "Compiled successfully!" (takes 30-60 seconds)
+
+
+STEP 4: Open Browser
+-------------------------------------------------------------------------------
+http://localhost:3000
+
+The browser should open automatically when compilation completes.
+
+
+================================================================================
+                              TROUBLESHOOTING
+================================================================================
+
+If backend won't start:
+- Check backend\.env exists
+- Check MongoDB is running
+- Check port 8000 is not in use
+
+If frontend won't start:
+- Check frontend\.env exists
+- Run: npm install --legacy-peer-deps
+- Check port 3000 is not in use
+
+If browser shows "Connection Refused":
+- Wait 30-60 seconds for compilation
+- Check terminal for "Compiled successfully!" message
+- Then refresh browser
+
+
+================================================================================
+                              VERIFICATION
+================================================================================
+
+Backend working: http://localhost:8000/api/
+Frontend working: http://localhost:3000
+API Docs: http://localhost:8000/docs
+
+
+================================================================================
+For detailed instructions, see: FINAL_SOLUTION.md
+================================================================================
+

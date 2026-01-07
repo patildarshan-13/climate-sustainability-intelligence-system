@@ -1,0 +1,78 @@
+.hero-glow {
+  background: radial-gradient(circle at 50% 0%, rgba(204, 255, 0, 0.15) 0%, transparent 60%);
+}
+
+.card-surface {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+}
+
+.upload-zone {
+  border: 2px dashed rgba(204, 255, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.upload-zone:hover {
+  border-color: rgba(204, 255, 0, 0.6);
+  background: rgba(204, 255, 0, 0.05);
+}
+
+.upload-zone.dragging {
+  border-color: #ccff00;
+  background: rgba(204, 255, 0, 0.1);
+  transform: scale(1.02);
+}
+
+.query-message {
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.pulse-dot {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(135deg, #ccff00 0%, #14b8a6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+button {
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.02);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.card {
+  transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}

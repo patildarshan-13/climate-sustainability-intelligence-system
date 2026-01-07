@@ -1,0 +1,167 @@
+{
+  "identity": {
+    "name": "EcoIntel",
+    "persona": "E1 - The Anti-AI Designer",
+    "vibe": "Bioluminescent Intelligence",
+    "emotional_tone": "Precision, Organic, Futuristic, Trustworthy"
+  },
+  "typography": {
+    "fonts": {
+      "heading": {
+        "family": "Outfit",
+        "url": "https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap",
+        "weights": ["300", "400", "500", "600", "700"],
+        "usage": "Headings, Hero Text, Big Numbers"
+      },
+      "body": {
+        "family": "Plus Jakarta Sans",
+        "url": "https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap",
+        "weights": ["400", "500", "600", "700"],
+        "usage": "Paragraphs, UI Elements, Inputs"
+      },
+      "mono": {
+        "family": "JetBrains Mono",
+        "url": "https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap",
+        "weights": ["400", "500"],
+        "usage": "Code snippets, Data values, IDs"
+      }
+    },
+    "rules": {
+      "headings": "Tight tracking (-0.02em). Use font-light (300) for massive hero text, font-semibold (600) for section headers.",
+      "body": "Relaxed leading (1.6). High contrast text for readability.",
+      "overline": "Uppercase, tracking-widest (0.2em), text-xs, font-bold."
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": {
+        "default": "#050505",
+        "paper": "#0a0a0a",
+        "subtle": "#121212"
+      },
+      "primary": {
+        "main": "#ccff00",
+        "hover": "#b3e600",
+        "foreground": "#000000"
+      },
+      "secondary": {
+        "main": "#0ea5e9",
+        "foreground": "#ffffff"
+      },
+      "accent": {
+        "teal": "#14b8a6",
+        "purple": "#8b5cf6"
+      },
+      "text": {
+        "primary": "#ededed",
+        "secondary": "#a1a1aa",
+        "muted": "#52525b"
+      },
+      "border": {
+        "default": "rgba(255, 255, 255, 0.1)",
+        "active": "rgba(204, 255, 0, 0.3)"
+      }
+    },
+    "gradients": {
+      "hero_glow": "radial-gradient(circle at 50% 0%, rgba(204, 255, 0, 0.15) 0%, transparent 60%)",
+      "card_surface": "linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%)"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": {
+      "default": "bg-black/40 backdrop-blur-xl border border-white/10",
+      "heavy": "bg-black/60 backdrop-blur-2xl border border-white/5"
+    },
+    "shadows": {
+      "glow": "0 0 20px rgba(204, 255, 0, 0.15)",
+      "card": "0 4px 24px -4px rgba(0, 0, 0, 0.5)"
+    },
+    "borders": {
+      "subtle": "border border-white/10",
+      "highlight": "border border-[#ccff00]/30"
+    },
+    "texture": {
+      "noise": "url(\"data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E\")"
+    }
+  },
+  "layout_strategies": {
+    "landing_page": {
+      "grid": "Tetris Grid (Mode A)",
+      "description": "Asymmetrical bento grid. Use col-span-full for hero, mixed spans for features.",
+      "spacing": "Generous (gap-8 to gap-12). Padding p-8 to p-24."
+    },
+    "dashboard": {
+      "grid": "Control Room Grid (Mode B)",
+      "description": "Dense, data-heavy grid. 4 columns. Widgets stretch to fill height.",
+      "spacing": "Tight (gap-4). Padding p-6."
+    }
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-[#ccff00] text-black hover:bg-[#b3e600] rounded-full px-8 py-6 font-semibold tracking-tight transition-transform hover:scale-105 active:scale-95",
+      "secondary": "bg-white/5 text-white border border-white/10 hover:bg-white/10 rounded-full px-6 py-4 backdrop-blur-md"
+    },
+    "cards": {
+      "style": "bg-black/40 backdrop-blur-md border border-white/10 rounded-2xl p-6 hover:border-[#ccff00]/30 transition-colors duration-300",
+      "interaction": "Add a subtle glow on hover. Use the 'Tracing Beam' effect for featured cards."
+    },
+    "inputs": {
+      "style": "bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/30 focus:border-[#ccff00]/50 focus:ring-1 focus:ring-[#ccff00]/50 transition-all"
+    },
+    "navigation": {
+      "sidebar": "Fixed left, w-64, h-screen, bg-black/80 backdrop-blur-xl border-r border-white/10. Links use ghost variant with left-border indicator on active."
+    }
+  },
+  "motion": {
+    "library": "framer-motion",
+    "variants": {
+      "fadeInUp": {
+        "initial": { "opacity": 0, "y": 20 },
+        "animate": { "opacity": 1, "y": 0 },
+        "transition": { "duration": 0.5, "ease": "easeOut" }
+      },
+      "staggerContainer": {
+        "animate": { "transition": { "staggerChildren": 0.1 } }
+      }
+    },
+    "micro_interactions": "Buttons scale slightly on hover. Cards lift (-2px) on hover."
+  },
+  "images": {
+    "hero_background": {
+      "url": "https://images.pexels.com/photos/18069371/pexels-photo-18069371.png",
+      "alt": "Abstract bioluminescent data waves",
+      "usage": "Hero section background with heavy overlay (opacity 0.3)"
+    },
+    "feature_abstract": {
+      "url": "https://images.pexels.com/photos/27141314/pexels-photo-27141314.jpeg",
+      "alt": "Futuristic tech interface abstract",
+      "usage": "Feature cards or 'How it works' section background"
+    },
+    "logo_placeholder": {
+      "text": "EcoIntel",
+      "style": "Font-Outfit, Bold, Tracking-tighter, Color-Primary"
+    }
+  },
+  "icons": {
+    "library": "lucide-react",
+    "style": "Stroke width 1.5px. Color matches text-secondary or accent."
+  },
+  "instructions_to_main_agent": [
+    "1. SETUP: Install 'framer-motion', 'clsx', 'tailwind-merge' immediately.",
+    "2. THEME: Apply the dark theme variables to 'index.css' first. Ensure background is #050505.",
+    "3. FONTS: Import Outfit and Plus Jakarta Sans in 'index.css' or 'App.css'.",
+    "4. LAYOUT: Build the Landing Page using the 'Tetris Grid'. Do not use a simple centered container.",
+    "5. DASHBOARD: Build the Dashboard using the 'Control Room Grid'. Use a Sidebar layout.",
+    "6. COMPONENTS: Use Shadcn logic but OVERRIDE the styles with the 'visual_enhancers' defined above. No default white cards.",
+    "7. GLASSMORPHISM: Apply 'backdrop-blur-xl' to the Sidebar and Header.",
+    "8. CRITICAL: Do not use gradients for text. Keep text solid #ededed for readability.",
+    "9. DATA-TESTID: Add 'data-testid' to all interactive elements (buttons, inputs, cards)."
+  ],
+  "universal_guidelines": [
+    "Avoid 'AI slop' (generic centered layouts, default blue/purple gradients).",
+    "Use 2-3x more spacing than typical (p-8, p-12).",
+    "Every interaction must have a micro-animation (hover, focus, active).",
+    "Never use pure black (#000000) for backgrounds, use #050505.",
+    "Ensure contrast ratios meet WCAG AA (4.5:1) for text."
+  ]
+}
