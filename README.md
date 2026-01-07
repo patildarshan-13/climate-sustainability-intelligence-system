@@ -14,6 +14,21 @@ Architecture: React frontend → FastAPI backend → RAG pipeline (SentenceTrans
 - **Modern UI**: Beautiful, responsive interface built with React and Tailwind CSS
 - **Cost-Efficient AI**: Fully local inference with open-source models (no vendor lock-in)
 
+## 📸 Application Screenshots
+
+### Dashboard
+![Dashboard](images/dashboard.png)
+
+### Document Upload
+![Document Upload](images/upload.png)
+
+### Query Results
+![Query Results](images/query-results.png)
+
+
+
+
+
 
 ## 📋 Prerequisites
 
